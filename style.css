@@ -13,6 +13,7 @@ body{
     color: white;
     padding: 10px 20px;
     border: none;
+    margin-top: 20px;
 }
 #copyButton:hover{
     background-color: rgba(11, 144, 11, 0.905);
