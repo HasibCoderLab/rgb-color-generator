@@ -8,3 +8,13 @@ body{
     border: 1px solid black;
     margin: 0 auto;
 }
+#copyButton{
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}
+#copyButton:hover{
+    background-color: rgba(11, 144, 11, 0.905);
+cursor: pointer;
+}
