@@ -102,3 +102,99 @@ button {
     margin: 0;
     font-weight: 600;
 }
+
+
+.social-links {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.social-links p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: #f3f3f3;
+  transition: all 0.3s ease;
+  font-size: 1em;
+}
+
+.link img {
+  width: 20px;
+  height: 20px;
+}
+
+.link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio {
+  background-color: #cce7ff;
+}
+
+.facebook {
+  background-color: #e8f4ff;
+  color: #1877f2;
+}
+
+.github {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.instagram {
+  background-color: #fde2e4;
+  color: #c32aa3;
+}
+
+
+ .links  a {
+    color: #0066cc;
+  }
+
+.copyright {
+  text-align: center;
+  padding: 20px 15px;
+  margin-top: 40px;
+  font-size: 1em;
+  background: linear-gradient(to right, #dbeeff, #f0f8ff);
+  border-top: 1px solid #ccc;
+  color: #2c3e50;
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.copyright p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.copyright a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.copyright a:hover {
+  color: #003366;
+  text-shadow: 0 0 3px rgba(0, 102, 204, 0.4);
+}
