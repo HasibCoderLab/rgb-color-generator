@@ -12,16 +12,11 @@ const generateColor = () => {
 
 // copy Btn
 
-// function forcopy btn
-const copyColorCode = async () => {
-   const text = colorCode.innerText;
-   await navigator.clipboard.writeText(text);
-};
+// function for copy btn
+const copyColorCode = () => navigator.clipboard.writeText(text);
 
 
-copyButton.addEventListener("click", () => {
-   copyColorCode()
-})
+copyButton.addEventListener("click", copyColorCode)
 
 //  Function for  update Color;
 const updateColor = () => {
@@ -34,8 +29,12 @@ const updateColor = () => {
 const newColor = () => {
    updateColor();
 }
+// Button click
+generateColorBtn.addEventListener("click", updateColor);
 
-generateColorBtn.addEventListener("click",newColor)
-generateColor();
+document.addEventListener("DOMContentLoaded", updateColor)
 
- console.log(generateColor());
+
+
+//  console.log(generateColor());
+// 
