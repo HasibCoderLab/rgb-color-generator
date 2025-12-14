@@ -29,10 +29,16 @@ const updateColor = () => {
 const newColor = () => {
    updateColor();
 }
+
 // Button click
 generateColorBtn.addEventListener("click", updateColor);
 
 document.addEventListener("DOMContentLoaded", updateColor)
+copyButton.forEach(copyBtn => {
+   copyBtn.addEventListener("click",() =>{
+      
+   })
+});
 
 
 
