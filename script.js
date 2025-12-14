@@ -3,13 +3,14 @@ const colorCode = document.getElementById("colorCode");
 const copyButton = document.getElementById("copyButton");
 const generateColorBtn = document.getElementById("generateColorBtn");
 const popup = document.getElementById("successPopup")
+const btnIcon = document.querySelector("i");
 
 // generateColor RGB Color
 const generateColor = () => {
-   const r = Math.floor(Math.random() * 255);
-   const g = Math.floor(Math.random() * 256);
-   const b = Math.floor(Math.random() * 255);
-   return `rgb(${r} ,${g} , ${b})`;
+   const r = Math.floor(Math.random()*255);
+   const g = Math.floor(Math.random()*255);
+   const b = Math.floor(Math.random()*255);
+   return `rgb(${r},${g},${b})`;
 }
 
 //  Update  Created Color
@@ -22,8 +23,8 @@ const updateColor = () => {
 //  copy color code and shoe popUp
 const copyColorCode = () => {
    const text = colorCode.innerText;
-   navigator.clipboard.writeText(text).then(() => {
-      const btnIcon = document.querySelector("i");
+   navigator.clipboard.writeText(text)
+   .then(() => {
 
       // show icon
       btnIcon.className = "fa-solid fa-check";
@@ -32,8 +33,8 @@ const copyColorCode = () => {
       popup.classList.add("show");
 
       setTimeout(() => {
-         popup.classList.remove("show");
-         btnIcon.className = "fa-solid fa-copy";
+      popup.classList.remove("show");
+      btnIcon.className = "fa-solid fa-copy";
       }, 2000);
    });
 };
