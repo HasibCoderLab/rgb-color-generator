@@ -11,8 +11,8 @@ const generateColor = () => {
    const b = Math.floor(Math.random() * 255);
    return `rgb(${r} ,${g} , ${b})`;
 }
-//  Update  Created Color
 
+//  Update  Created Color
 const updateColor = () => {
    const color = generateColor();
    colorBox.style.backgroundColor = color;
@@ -24,8 +24,10 @@ const copyColorCode = () => {
    const text = colorCode.innerText;
    navigator.clipboard.writeText(text).then(() => {
       const btnIcon = document.querySelector("i");
+
       // show icon
       btnIcon.className = "fa-solid fa-check";
+
       // Show Popup
       popup.classList.add("show");
 
@@ -39,6 +41,3 @@ const copyColorCode = () => {
 generateColorBtn.addEventListener("click", updateColor);
 copyButton.addEventListener("click", copyColorCode);
 document.addEventListener("DOMContentLoaded", updateColor);
-
-//  console.log(generateColor());
-// 
