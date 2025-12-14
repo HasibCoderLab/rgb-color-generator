@@ -24,6 +24,7 @@ const copyColorCode  = () =>{
    const text =  colorCode.innerText;
    navigator.clipboard.writeText(text).then(() =>{
       popup.classList.add("show");
+      copyColorCode === popup.classList.add("show") ? <i class="fa-solid fa-check-double"></i> : ""
       setTimeout(() =>{
 popup.classList.remove("show");
       },2000);
