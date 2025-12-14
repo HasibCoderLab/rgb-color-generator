@@ -13,27 +13,32 @@ const generateColor = () => {
 }
 //  Update  Created Color
 
-const updateColor = () =>{
+const updateColor = () => {
    const color = generateColor();
    colorBox.style.backgroundColor = color;
    colorCode.innerText = color;
 }
 
 //  copy color code and shoe popUp
-const copyColorCode  = () =>{
-   const text =  colorCode.innerText;
-   navigator.clipboard.writeText(text).then(() =>{
+const copyColorCode = () => {
+   const text = colorCode.innerText;
+   navigator.clipboard.writeText(text).then(() => {
+      const btnIcon = document.querySelector("i");
+      // show icon
+      btnIcon.className = "fa-solid fa-check";
+      // Show Popup
       popup.classList.add("show");
-      copyColorCode === popup.classList.add("show") ? <i class="fa-solid fa-check-double"></i> : ""
-      setTimeout(() =>{
-popup.classList.remove("show");
-      },2000);
+
+      setTimeout(() => {
+         popup.classList.remove("show");
+         btnIcon.className = "fa-solid fa-copy";
+      }, 2000);
    });
 };
 //         ========= EventListeners======
-generateColorBtn.addEventListener("click" , updateColor);
-copyButton.addEventListener("click" ,copyColorCode);
-document.addEventListener("DOMContentLoaded" ,updateColor);
+generateColorBtn.addEventListener("click", updateColor);
+copyButton.addEventListener("click", copyColorCode);
+document.addEventListener("DOMContentLoaded", updateColor);
 
 //  console.log(generateColor());
 // 
