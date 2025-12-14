@@ -9,22 +9,35 @@ const generateColor = () => {
    return `rgb(${r} ,${g} , ${b})`;
 }
 
-//  Function for  update Color;
+// copy Btn
 
+// function forcopy btn
+const copyColorCode = () => {
+   const colorCodev = colorCode;
+   const inputTag = document.createElement("input");
+   document.body.appendChild(inputTag);
+   inputTag.value = colorCodev.innerText;
+   inputTag.select();
+   document.execCommand("copy");
+   document.body.removeChild(inputTag)
+}
+
+copyButton.addEventListener("click", () => {
+   copyColorCode()
+})
+
+//  Function for  update Color;
 const updateColor = () => {
    const color = generateColor();
    colorBox.style.backgroundColor = color;
-   colorCode.innerText = color
+   colorCode.innerText = color;
 }
 
-//  Function for  show  Color code;
-copyButton.addEventListener("click", () => {
-
-})
+//  function  for update UI with color in box
 const newColor = () => {
-
-   updateColor()
+   updateColor();
 }
-generateColor()
+
+generateColor();
 
 //  console.log(generateColor());
