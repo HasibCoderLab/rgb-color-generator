@@ -23,8 +23,8 @@ copyButton.addEventListener("click", () => {
 })
 const newColor = () => {
 
-   generateColor()
+   updateColor()
 }
-updateColor()
+generateColor()
 
 //  console.log(generateColor());
