@@ -1,6 +1,7 @@
 const colorBox = document.getElementById("colorBox");
 const colorCode = document.getElementById("colorCode");
 const copyButton = document.getElementById("copyButton");
+const generateColorBtn = document.getElementById("generateColorBtn");
 
 const generateColor = () => {
    const r = Math.floor(Math.random() * 255);
@@ -12,15 +13,11 @@ const generateColor = () => {
 // copy Btn
 
 // function forcopy btn
-const copyColorCode = () => {
-   const colorCodev = colorCode;
-   const inputTag = document.createElement("input");
-   document.body.appendChild(inputTag);
-   inputTag.value = colorCodev.innerText;
-   inputTag.select();
-   document.execCommand("copy");
-   document.body.removeChild(inputTag)
-}
+const copyColorCode = async () => {
+   const text = colorCode.innerText;
+   await navigator.clipboard.writeText(text);
+};
+
 
 copyButton.addEventListener("click", () => {
    copyColorCode()
@@ -38,6 +35,7 @@ const newColor = () => {
    updateColor();
 }
 
+generateColorBtn.addEventListener("click",newColor)
 generateColor();
 
-//  console.log(generateColor());
+ console.log(generateColor());
